@@ -1,4 +1,4 @@
-//Implementaci髇 de librer韆s
+//Implementaci贸n de librer铆as
 #include "adivinum.h"
 #include "ahorcado.h"
 #include "batallanaval.h"
@@ -55,9 +55,9 @@ char MenuEstadisticasUsuarios(int puntosMM, int puntosAD, int puntosWC,
 using namespace std;
 
 int main() {
-	//Declaraci髇 estructura Usuario
+	//Declaraci贸n estructura Usuario
 	struct Usuario actual[100];
-	//Declaraci髇 estructura Partida
+	//Declaraci贸n estructura Partida
 	struct Partida partidas[1000];
 	char opcion, opcion2, opcion3, opcion4, caracter[99];
 	int id, npart, vecesjugadasMM, puntajemaximoMM, 
@@ -66,7 +66,7 @@ int main() {
 		vecesjugadasBN, puntajemaximoBN;
 	while(opcion != '9') {
 		LimpiarPantalla();
-		//Definici髇 color de texto (blanco brillante)
+		//Definici贸n color de texto (blanco brillante)
 		ConfigurarColor(15);
 		npart = 0, vecesjugadasMM = 0, puntajemaximoMM = 0, 
 		vecesjugadasAD = 0, puntajemaximoAD = 0, vecesjugadasWC = 0,
@@ -1230,7 +1230,7 @@ Usuario CrearUsuario() {
 	struct Usuario actual;
 	while(detener != true) {
 		LimpiarPantalla();
-		//Informaci髇 para el jugador
+		//Informaci贸n para el jugador
 		cout << "A continuaci" << (char) 162 << "n, debe ingresar un nombre"
 			<< " de usuario para su nueva" << endl << "cuenta. " << endl 
 			<< endl << "El nombre debe tener por lo menos seis caracteres y "
@@ -1293,10 +1293,10 @@ Usuario CrearUsuario() {
 		   && condiciond == true && condicione == true && longitud == true) {
 			cout << endl;
 			cout << "Nombre de usuario ";
-			//Definici髇 color de texto (verde claro)
+			//Definici贸n color de texto (verde claro)
 			ConfigurarColor(10);
 			cout << "v" << (char) 160 << "lido";
-			//Definici髇 color de texto (blanco brillante)
+			//Definici贸n color de texto (blanco brillante)
 			ConfigurarColor(15);
 			cout << ".";
 			detener = true;
@@ -1305,10 +1305,10 @@ Usuario CrearUsuario() {
 		else {
 			cout << endl;
 			cout << "Nombre de usuario ";
-			//Definici髇 color de texto (rojo claro)
+			//Definici贸n color de texto (rojo claro)
 			ConfigurarColor(12);
 			cout << "inv" << (char) 160 << "lido";
-			//Definici髇 color de texto (blanco brillante)
+			//Definici贸n color de texto (blanco brillante)
 			ConfigurarColor(15);
 			cout << "." << endl << endl;
 			//Opciones para el jugador
@@ -1327,7 +1327,7 @@ Usuario CrearUsuario() {
 	detener = false;
 	while(detener != true) {
 		LimpiarPantalla();
-		//Informaci髇 para el jugador
+		//Informaci贸n para el jugador
 		cout << "A continuaci" << (char) 162 << "n, debe ingresar una contrase"
 			<< (char) 164 << "a para su nueva cuenta." << endl << endl;
 		cout << "La contrase" << (char) 164 << "a debe tener por lo menos seis "
@@ -1539,10 +1539,10 @@ Usuario CrearUsuario() {
 		   && condiciond == true && condicione == true && longitud == true) {
 			cout << endl;
 			cout << "Contrase" << (char) 164 << "a ";
-			//Definici髇 color de texto (verde claro)
+			//Definici贸n color de texto (verde claro)
 			ConfigurarColor(10);
 			cout << "v" << (char) 160 << "lida";
-			//Definici髇 color de texto (blanco brillante)
+			//Definici贸n color de texto (blanco brillante)
 			ConfigurarColor(15);
 			cout << ".";
 			Sleep(2500);
@@ -1550,7 +1550,7 @@ Usuario CrearUsuario() {
 			opcion[0] = '0';
 			while(opcion[0] != 'x' && opcion[0] != 'X' && detener != true) {
 				LimpiarPantalla();
-				//Informaci髇 para el jugador
+				//Informaci贸n para el jugador
 				cout << "A continuaci" << (char) 162 << "n, debe ingresar la " 
 					<< "contrase" << (char) 164 
 					<< "a nuevamente para " << endl << "completar el registro: ";
@@ -1573,10 +1573,10 @@ Usuario CrearUsuario() {
 					&& (string(contra2).length() == caracterestotales)) { 
 					cout << endl;
 					cout << "Contrase" << (char) 164 << "a ";
-					//Definici髇 color de texto (verde claro)
+					//Definici贸n color de texto (verde claro)
 					ConfigurarColor(10);
 					cout << "v" << (char) 160 << "lida";
-					//Definici髇 color de texto (blanco brillante)
+					//Definici贸n color de texto (blanco brillante)
 					ConfigurarColor(15);
 					cout << ".";
 					strcpy(actual.clave, contra);
@@ -1600,10 +1600,10 @@ Usuario CrearUsuario() {
 		else {
 			cout << endl;
 			cout << "Contrase" << (char) 164 << "a ";
-			//Definici髇 color de texto (rojo claro)
+			//Definici贸n color de texto (rojo claro)
 			ConfigurarColor(12);
 			cout << "inv" << (char) 160 << "lida"; 
-			//Definici髇 color de texto (blanco brillante)
+			//Definici贸n color de texto (blanco brillante)
 			ConfigurarColor(15);
 			cout << "." << endl << endl;
 			//Opciones para el jugador
@@ -1619,7 +1619,7 @@ Usuario CrearUsuario() {
 			}
 		}
 	}
-	//C醠culo de fecha
+	//C谩lculo de fecha
 	time_t t = time(0);
 	struct tm * now = localtime( & t );
 	actual.ultimo_acceso = {now -> tm_mday, now -> tm_mon + 1, 
@@ -1651,7 +1651,7 @@ int IniciarSesion(Usuario actual) {
 	int id = -2;
 	while(detener != true) {
 		LimpiarPantalla();
-		//Informaci髇 para el jugador
+		//Informaci贸n para el jugador
 		cout << "A continuaci" << (char) 162 << "n, debe ingresar su nombre de "
 			"usuario y contrase" << (char) 164 << "a" << endl << "para poder "
 			<< "jugar y/o ver las estad" << (char) 161 << "sticas." << endl 
@@ -1696,10 +1696,10 @@ int IniciarSesion(Usuario actual) {
 		if(existeusuario == true) { 
 			cout << endl;
 			cout << "Nombre de usuario ";
-			//Definici髇 color de texto (verde claro)
+			//Definici贸n color de texto (verde claro)
 			ConfigurarColor(10);
 			cout << "v" << (char) 160 << "lido";
-			//Definici髇 color de texto (blanco brillante)
+			//Definici贸n color de texto (blanco brillante)
 			ConfigurarColor(15);
 			cout << ".";
 			Sleep(2500);
@@ -1708,10 +1708,10 @@ int IniciarSesion(Usuario actual) {
 		else { 
 				cout << endl;
 				cout << "Nombre de usuario ";
-				//Definici髇 color de texto (rojo claro)
+				//Definici贸n color de texto (rojo claro)
 				ConfigurarColor(12);
 				cout << "inv" << (char) 160 << "lido";
-				//Definici髇 color de texto (blanco brillante)
+				//Definici贸n color de texto (blanco brillante)
 				ConfigurarColor(15);
 				cout << "." << endl << endl;
 				//Opciones para el jugador
@@ -1732,7 +1732,7 @@ int IniciarSesion(Usuario actual) {
 	else detener = false;
 	while(detener != true) {
 		LimpiarPantalla();
-		//Informaci髇 para el jugador
+		//Informaci贸n para el jugador
 		cout << "A continuaci" << (char) 162 << "n, debe ingresar su nombre de "
 			"usuario y contrase" << (char) 164 << "a" << endl << "para poder "
 			<< "jugar y/o ver las estad" << (char) 161 << "sticas." << endl 
@@ -1751,10 +1751,10 @@ int IniciarSesion(Usuario actual) {
 			&& (string(contra).length() == caracterestotales)) { 
 			cout << endl;
 			cout << "Contrase" << (char) 164 << "a ";
-			//Definici髇 color de texto (verde claro)
+			//Definici贸n color de texto (verde claro)
 			ConfigurarColor(10);
 			cout << "v" << (char) 160 << "lida";
-			//Definici髇 color de texto (blanco brillante)
+			//Definici贸n color de texto (blanco brillante)
 			ConfigurarColor(15);
 			cout << ".";
 			Sleep(2500);
@@ -1763,10 +1763,10 @@ int IniciarSesion(Usuario actual) {
 		else { 
 				cout << endl;
 				cout << "Contrase" << (char) 164 << "a ";
-				//Definici髇 color de texto (rojo claro)
+				//Definici贸n color de texto (rojo claro)
 				ConfigurarColor(12);
 				cout << "inv" << (char) 160 << "lida"; 
-				//Definici髇 color de texto (blanco brillante)
+				//Definici贸n color de texto (blanco brillante)
 				ConfigurarColor(15);
 				cout << "." << endl << endl;
 				//Opciones para el jugador
@@ -4647,7 +4647,7 @@ char MenuEstadisticasJuegos(int vecesjugadasMM, int vecesjugadasAD,
 	cout << "Estad" << (char) 161 << "sticas de Juegos" << endl;
 	cout << "==================================================================" 
 		<< "==" << endl << endl;
-	//Informaci髇 para el jugador (juegos m醩 jugados)
+	//Informaci贸n para el jugador (juegos m谩s jugados)
 	cout << "Primer juego m" << (char) 160 << "s jugado: " << juegomasjugado1 
 		<< "." << endl; 
 	cout << "Segundo juego m" << (char) 160 << "s jugado: " << juegomasjugado2 
@@ -4657,369 +4657,369 @@ char MenuEstadisticasJuegos(int vecesjugadasMM, int vecesjugadasAD,
 	cout << "Cuarto juego m" << (char) 160 << "s jugado: " << juegomasjugado4 
 		<< "." << endl;
 	cout << "Juego menos jugado: " << juegomenosjugado << "." << endl << endl;
-	//Informaci髇 para el jugador (ranking de premios por juego)
+	//Informaci贸n para el jugador (ranking de premios por juego)
 	cout << setw(35) << "Ranking de premios por juego" << endl << endl;
 	cout << setw(24) << "Maymen" << setw(10) << "Adivinum" << setw(9) 
 		<< "Warcoin" << setw(10) << "Ahorcado" << setw(15) << "Batalla Naval" 
 		<< endl;
 	cout << setw(8) << "0" << setw(8) << "Diploma" << setw(6);
 	if(mayorpremioMM == diplomasMM) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << diplomasMM;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << diplomasMM; 
 	cout << setw(9); 
 	if(mayorpremioAD == diplomasAD) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << diplomasAD;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << diplomasAD; 
 	cout << setw(9) << "0" << setw(10) << "0" << setw(12);
 	if(mayorpremioBN == diplomasBN) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << diplomasBN;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << diplomasBN; 
 	cout << endl;
 	cout << setw(8) << "1" << setw(8) << "Moneda" << setw(6);
 	if(mayorpremioMM == monedasMM && monedasMM != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << monedasMM;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << monedasMM;
 	cout << setw(9); 
 	if(mayorpremioAD == monedasAD && monedasAD != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << monedasAD;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << monedasAD; 
 	cout << setw(9) << "0" << setw(10) << "0" << setw(12);
 	if(mayorpremioBN == monedasBN && monedasBN != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << monedasBN;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << monedasBN;
 	cout << endl;
 	cout << setw(8) << "2" << setw(8) << "Medalla" << setw(6); 
 	if(mayorpremioMM == medallasMM && medallasMM != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << medallasMM;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << medallasMM;
 	cout << setw(9);
 	if(mayorpremioAD == medallasAD && medallasAD != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << medallasAD;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << medallasAD;
 	cout << setw(9) << "0" << setw(10);
 	if(mayorpremioAH == medallasAH) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << medallasAH;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << medallasAH;
 	cout << setw(12);
 	if(mayorpremioBN == medallasBN && medallasBN != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << medallasBN;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << medallasBN;
 	cout << endl;
 	cout << setw(8) << "3" << setw(8) << "Trofeo" << setw(6);
 	if(mayorpremioMM == trofeosMM && trofeosMM != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << trofeosMM;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << trofeosMM;
 	cout << setw(9);
 	if(mayorpremioAD == trofeosAD && trofeosAD != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << trofeosAD;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << trofeosAD;
 	cout << setw(9) << "0" << setw(10);
 	if(mayorpremioAH == trofeosAH && trofeosAH != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << trofeosAH;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << trofeosAH;
 	cout << setw(12);
 	if(mayorpremioBN == trofeosBN && trofeosBN != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << trofeosBN;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << trofeosBN;
 	cout << endl;
 	cout << setw(8) << "4" << setw(8) << "Copa" << setw(6);
 	if(mayorpremioMM == copasMM && copasMM != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << copasMM;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << copasMM;
 	cout << setw(9);
 	if(mayorpremioAD == copasAD && copasAD != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << copasAD;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << copasAD;
 	cout << setw(9);
 	if(mayorpremioWC == copasWC) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << copasWC;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << copasWC;
 	cout << setw(10);
 	if(mayorpremioAH == copasAH && copasAH != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << copasAH;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << copasAH;
 	cout << setw(12);
 	if(mayorpremioBN == copasBN && copasBN != 0) {
-		//Definici髇 de color de texto (rojo claro)
+		//Definici贸n de color de texto (rojo claro)
 		ConfigurarColor(12);
 		cout << copasBN;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << copasBN;
 	cout << endl << endl;
-	//Informaci髇 para el jugador (ranking de juegos por premios)
+	//Informaci贸n para el jugador (ranking de juegos por premios)
 	cout << setw(36) << "Ranking de juegos por premios" << endl << endl;
 	cout << setw(24) << "Maymen" << setw(10) << "Adivinum" << setw(9) 
 		<< "Warcoin" << setw(10) << "Ahorcado" << setw(15) << "Batalla Naval" 
 		<< endl;
 	cout << setw(8) << "0" << setw(8) << "Diploma" << setw(6);
 	if(mayordiploma == diplomasMM || mayordiploma == 0) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << diplomasMM;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << diplomasMM; 
 	cout << setw(9); 
 	if(mayordiploma == diplomasAD && mayordiploma >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << diplomasAD;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << diplomasAD; 
 	cout << setw(9) << "0" << setw(10) << "0" << setw(12);
 	if(mayordiploma == diplomasBN && mayordiploma >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << diplomasBN;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << diplomasBN; 
 	cout << endl;
 	cout << setw(8) << "1" << setw(8) << "Moneda" << setw(6);
 	if(mayormoneda == monedasMM || mayormoneda == 0) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << monedasMM;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << monedasMM;
 	cout << setw(9); 
 	if(mayormoneda == monedasAD && mayormoneda >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << monedasAD;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << monedasAD; 
 	cout << setw(9) << "0" << setw(10) << "0" << setw(12);
 	if(mayormoneda == monedasBN && mayormoneda >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << monedasBN;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << monedasBN;
 	cout << endl;
 	cout << setw(8) << "2" << setw(8) << "Medalla" << setw(6); 
 	if(mayormedalla == medallasMM && mayormedalla == 0) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << medallasMM;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << medallasMM;
 	cout << setw(9);
 	if(mayormedalla == medallasAD && mayormedalla >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << medallasAD;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << medallasAD;
 	cout << setw(9) << "0" << setw(10);
 	if(mayormedalla == medallasAH && mayormedalla >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << medallasAH;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << medallasAH;
 	cout << setw(12);
 	if(mayormedalla == medallasBN && mayormedalla >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << medallasBN;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << medallasBN;
 	cout << endl;
 	cout << setw(8) << "3" << setw(8) << "Trofeo" << setw(6);
 	if(mayortrofeo == trofeosMM || mayortrofeo == 0) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << trofeosMM;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << trofeosMM;
 	cout << setw(9);
 	if(mayortrofeo == trofeosAD && mayortrofeo >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << trofeosAD;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << trofeosAD;
 	cout << setw(9) << "0" << setw(10);
 	if(mayortrofeo == trofeosAH && mayortrofeo >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << trofeosAH;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << trofeosAH;
 	cout << setw(12);
 	if(mayortrofeo == trofeosBN && mayortrofeo >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << trofeosBN;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << trofeosBN;
 	cout << endl;
 	cout << setw(8) << "4" << setw(8) << "Copa" << setw(6);
 	if(mayorcopa == copasMM || mayorcopa == 0) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << copasMM;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << copasMM;
 	cout << setw(9);
 	if(mayorcopa == copasAD && mayorcopa >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << copasAD;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << copasAD;
 	cout << setw(9);
 	if(mayorcopa == copasWC && mayorcopa >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << copasWC;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << copasWC;
 	cout << setw(10);
 	if(mayorcopa == copasAH && mayorcopa >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << copasAH;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << copasAH;
 	cout << setw(12);
 	if(mayorcopa == copasBN && mayorcopa >= 1) {
-		//Definici髇 de color de texto (azul claro)
+		//Definici贸n de color de texto (azul claro)
 		ConfigurarColor(9);
 		cout << copasBN;
-		//Definici髇 de color de texto (blanco brillante)
+		//Definici贸n de color de texto (blanco brillante)
 		ConfigurarColor(15);
 	}
 	else cout << copasBN;
 	cout << endl << endl;
-	//Opci髇 para el jugador
+	//Opci贸n para el jugador
 	cout << "9. Volver a men" << (char) 163 << " anterior" << endl << endl;
 	cout << "==================================================================" 
 		<< "==" << endl << endl;
@@ -5344,7 +5344,7 @@ char MenuEstadisticasUsuarios(int puntosMM, int puntosAD, int puntosWC,
 	cout << "Estad" << (char) 161 << "sticas de Usuarios" << endl;
 	cout << "==================================================================" 
 		<< "==" << endl << endl;
-	//Informaci髇 para el jugador (mejores jugadores)
+	//Informaci贸n para el jugador (mejores jugadores)
 	cout << "Mejor jugador de MayMen: ";
 	if(puntosMM == 0) {
 		cout << "Nadie ha ganado hasta ahora." << endl; 
@@ -5375,7 +5375,7 @@ char MenuEstadisticasUsuarios(int puntosMM, int puntosAD, int puntosWC,
 	}
 	else cout << mejorjugadorBN << " con puntaje de " << puntosBN << ".";
 	cout << endl << endl; 
-	//Opci髇 para el jugador
+	//Opci贸n para el jugador
 	cout << "9. Volver a men" << (char) 163 << " anterior" << endl << endl;
 	cout << "==================================================================" 
 		<< "==" << endl << endl;
@@ -5428,3 +5428,4 @@ char MenuEstadisticasUsuarios(int puntosMM, int puntosAD, int puntosWC,
 	}
 	return opcion;
 }
+ 
