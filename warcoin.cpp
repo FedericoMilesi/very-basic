@@ -1,6 +1,6 @@
-//Implementaci髇 de librer韆
+//Implementaci贸n de librer铆a
 #include "warcoin.h"
-//Prototipo de funci髇
+//Prototipo de funci贸n
 void ConfigurarColor(int valor);
 using namespace std;
 
@@ -64,7 +64,7 @@ int JugarWarcoin() {
 		cin >> caracter;
 		maxmonedas = caracter - 48;
 	}
-	//Generaci髇 de pila de monedas
+	//Generaci贸n de pila de monedas
 	srand (time(NULL));
 	int monenpila = rand() % 50 + 10;
 	while (monenpila < 10 || monenpila > 50) {
@@ -75,7 +75,7 @@ int JugarWarcoin() {
 	cout << "Monedas en pila: ";
 	ConfigurarColor(15);
 	cout << monenpila << endl;
-	//Elecci髇 aleatoria del jugador del primer turno
+	//Elecci贸n aleatoria del jugador del primer turno
 	int primjugador = rand() % 2 + 1;
 	int monaretirar, ganador;
 	bool detener = false;
@@ -226,7 +226,7 @@ int JugarWarcoin() {
 	cout << endl;
 	int puntaje = 0;
 	if (ganador == 0) {
-		//C醠culo de puntaje
+		//C谩lculo de puntaje
 		puntaje = 5;
 		//Mensaje de victoria
 		cout << "VACIASTE LA PILA, HAS GANADO. Puntaje obtenido: " << puntaje
@@ -238,3 +238,4 @@ int JugarWarcoin() {
 		cout << "LA COMPUTADORA HA VACIADO LA PILA, HAS FALLADO." << endl;
 	return puntaje;
 }
+ 
