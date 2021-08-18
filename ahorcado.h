@@ -7,3 +7,4 @@
 
 void InstruccionesAhorcado();
 int JugarAhorcado();
+ 
