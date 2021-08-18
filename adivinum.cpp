@@ -1,6 +1,6 @@
-//Implementación de librería
+//ImplementaciÃ³n de librerÃ­a
 #include "adivinum.h"
-//Prototipo de función
+//Prototipo de funciÃ³n
 void ConfigurarColor(int valor);
 using namespace std;
 
@@ -34,7 +34,7 @@ int JugarAdivinum() {
 	int intentos = 1;
 	cout << "Intento " << intentos << ": ";
 	int digitosigualpos = 0, digitosdispos = 0;
-	//Generación de número secreto
+	//GeneraciÃ³n de nÃºmero secreto
 	srand (time(NULL));
 	int numsecreto = rand() % 9999 + 1000;
 	int cifra1n1 = numsecreto / 1000, cifra2n1 = (numsecreto / 100) % 10, 
@@ -91,7 +91,7 @@ int JugarAdivinum() {
 	cout << endl;
 	int puntaje = 0;
 	if (adivinanza == numsecreto) {
-		//Cálculo de puntaje
+		//CÃ¡lculo de puntaje
 		puntaje = 11 - intentos;
 		//Mensaje de victoria
 		cout << "HAS GANADO. Puntaje obtenido: " << puntaje
@@ -103,3 +103,4 @@ int JugarAdivinum() {
 			<< "." << endl;
 	return puntaje;
 }
+ 
