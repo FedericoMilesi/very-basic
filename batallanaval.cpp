@@ -1,4 +1,4 @@
-//Implementación de librería
+//ImplementaciÃ³n de librerÃ­a
 #include "batallanaval.h"
 //Prototipos de funciones
 void ConfigurarColor(int valor);
@@ -120,7 +120,7 @@ int JugarBatallaNaval() {
 	ConfigurarColor(10);
 	char tableropartida[10][10], tablerooculto[10][10], letras;
 	string numeros = "     1 2 3 4 5 6 7 8 9 10";
-	//Generación de tablero
+	//GeneraciÃ³n de tablero
 	cargarTablero(tableropartida);
 	for(int columnas = 0; columnas < 10; columnas++) {
 		for(int filas = 0; filas < 10; filas++) {
@@ -402,7 +402,7 @@ int JugarBatallaNaval() {
 	}
 	int puntaje = 0;
 	if (puntos > 0) {
-		//Cálculo de puntaje
+		//CÃ¡lculo de puntaje
 		puntaje = puntos;
 		//Mensaje de victoria
 		cout << endl << endl << "HAS GANADO. Puntaje obtenido: " << puntaje 
@@ -415,3 +415,4 @@ int JugarBatallaNaval() {
 	ConfigurarColor(15);
 	return puntaje;
 }
+ 
