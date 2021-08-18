@@ -1,4 +1,4 @@
-//Implementación de librería
+//ImplementaciÃ³n de librerÃ­a
 #include "ahorcado.h"
 //Prototipos de funciones
 void ConfigurarColor(int valor);
@@ -317,7 +317,7 @@ void LetrasYaIngresadas(char letrasincorrectas[10]) {
 }
 
 int JugarAhorcado() {
-	//Generación de palabra oculta
+	//GeneraciÃ³n de palabra oculta
 	srand (time(NULL));
 	int aleatoria = rand() % 30 + 0, caracteres;
 	string palabra; 
@@ -327,7 +327,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(1);
 		char guiones[11] = "__________";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Traduce el código fuente a código ejecutable.";
+		char pista[] = "Traduce el cÃ³digo fuente a cÃ³digo ejecutable.";
 		pista[12] = (char) 162;
 		pista[28] = (char) 162;
 		strcpy(pistaelegida, pista);
@@ -339,7 +339,7 @@ int JugarAhorcado() {
 		char guiones[8] = "_______";
 		strcpy(palabraoculta, guiones);
 		char pista[] =
-	 "En él disponemos de un conjunto de ventanas y de botones para programar.";
+	 "En Ã©l disponemos de un conjunto de ventanas y de botones para programar.";
 		pista[3] = (char) 130;
 		strcpy(pistaelegida, pista);
 		caracteres = 7;
@@ -349,7 +349,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(3);
 		char guiones[12] = "___________";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Debe realizar un conjunto mínimo de funciones.";
+		char pista[] = "Debe realizar un conjunto mÃ­nimo de funciones.";
 		pista[27] = (char) 161;
 		strcpy(pistaelegida, pista);
 		caracteres = 11;
@@ -368,7 +368,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(5);
 		char guiones[10] = "_________";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Estructura de control básica.";
+		char pista[] = "Estructura de control bÃ¡sica.";
 		pista[23] = (char) 160;
 		strcpy(pistaelegida, pista);
 		caracteres = 9;
@@ -378,7 +378,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(6);
 		char guiones[11] = "__________";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Estructura de control básica.";
+		char pista[] = "Estructura de control bÃ¡sica.";
 		pista[23] = (char) 160;
 		strcpy(pistaelegida, pista);
 		caracteres = 10;
@@ -389,7 +389,7 @@ int JugarAhorcado() {
 		char guiones[10] = "_________";
 		strcpy(palabraoculta, guiones);
 		char pista[] =
-		"Indica al preprocesador que realice acciones específicas.";
+		"Indica al preprocesador que realice acciones especÃ­ficas.";
 		pista[50] = (char) 161;
 		strcpy(pistaelegida, pista);
 		caracteres = 9;
@@ -427,7 +427,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(11);
 		char guiones[4] = "___";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Permite almacenar números enteros.";
+		char pista[] = "Permite almacenar nÃºmeros enteros.";
 		pista[19] = (char) 163;
 		strcpy(pistaelegida, pista);
 		caracteres = 3;
@@ -437,7 +437,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(12);
 		char guiones[6] = "_____";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Permite almacenar números con decimales.";
+		char pista[] = "Permite almacenar nÃºmeros con decimales.";
 		pista[19] = (char) 163;
 		strcpy(pistaelegida, pista);
 		caracteres = 5;
@@ -447,7 +447,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(13);
 		char guiones[5] = "____";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Permite almacenar símbolos.";
+		char pista[] = "Permite almacenar sÃ­mbolos.";
 		pista[19] = (char) 161;
 		strcpy(pistaelegida, pista);
 		caracteres = 4;
@@ -457,7 +457,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(14);
 		char guiones[7] = "______";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Permite almacenar números con decimales.";
+		char pista[] = "Permite almacenar nÃºmeros con decimales.";
 		pista[19] = (char) 163;
 		strcpy(pistaelegida, pista);
 		caracteres = 6;
@@ -495,7 +495,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(18);
 		char guiones[4] = "___";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Estructura de repetición.";
+		char pista[] = "Estructura de repeticiÃ³n.";
 		pista[22] = (char) 162;
 		strcpy(pistaelegida, pista);
 		caracteres = 3;
@@ -505,7 +505,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(19);
 		char guiones[6] = "_____";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Estructura de repetición.";
+		char pista[] = "Estructura de repeticiÃ³n.";
 		pista[22] = (char) 162;
 		strcpy(pistaelegida, pista);
 		caracteres = 5;
@@ -525,7 +525,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(21);
 		char guiones[6] = "_____";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Interrumpe un ciclo de repetición.";
+		char pista[] = "Interrumpe un ciclo de repeticiÃ³n.";
 		pista[31] = (char) 162;
 		strcpy(pistaelegida, pista);
 		caracteres = 5;
@@ -609,7 +609,7 @@ int JugarAhorcado() {
 		palabra = ElegirPalabra(30);		
 		char guiones[5] = "____";
 		strcpy(palabraoculta, guiones);
-		char pista[] = "Salto de línea.";
+		char pista[] = "Salto de lÃ­nea.";
 		pista[10] = (char) 161;
 		strcpy(pistaelegida, pista);
 		caracteres = 4;
@@ -724,7 +724,7 @@ int JugarAhorcado() {
 		cout << "Partes perdidas: ";
 		PartesPerdidas(partes);
 		cout << endl << endl;
-		//Cálculo de puntaje
+		//CÃ¡lculo de puntaje
 		puntaje = 50 - 2*partes;
 		//Mensaje de victoria
 		cout << "HAS GANADO. Puntaje obtenido: " << puntaje
@@ -743,3 +743,4 @@ int JugarAhorcado() {
 	}
 	return puntaje;
 }
+ 
