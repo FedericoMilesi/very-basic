@@ -1,6 +1,6 @@
-//Implementación de librería
+//ImplementaciÃ³n de librerÃ­a
 #include "maymen.h"
-//Prototipo de función
+//Prototipo de funciÃ³n
 void ConfigurarColor(int valor);
 using namespace std;
 
@@ -33,7 +33,7 @@ int JugarMaymen() {
 	int intentos = 1;
 	cout << "Intento " << intentos << ": ";
 	int numintervalomenor = 1, numintervalomayor = 999;
-	//Generación de número secreto
+	//GeneraciÃ³n de nÃºmero secreto
 	srand (time(NULL));
 	int numsecreto = rand() % 999 + 1;
 	while (numsecreto > 999 || numsecreto < 1) {
@@ -72,7 +72,7 @@ int JugarMaymen() {
 	cout << endl;
 	int puntaje = 0;
 	if (adivinanza == numsecreto) {
-		//Cálculo de puntaje
+		//CÃ¡lculo de puntaje
 		puntaje = 11 - intentos;
 		//Mensaje de victoria
 		cout << "HAS GANADO. Puntaje obtenido: " << puntaje
@@ -84,3 +84,4 @@ int JugarMaymen() {
 			<< "." << endl;
 	return puntaje;
 }
+ 
